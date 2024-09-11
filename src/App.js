@@ -1,24 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+
+import axios, { Axios } from "axios";
+import './App.scss';
+import "@fontsource/poppins";
+import MovieInfoComponent from "./component/MovieInfoComponent";
+import MovieComponent from "./component/MovieComponent";
+import { useState } from "react";
+import styled from "styled-components";
+
+export const API_KEY = 'f30e88d3';
 
 function App() {
+  const [searchQuery, updateSearchQuery] = useState();
+  const [timeoutId, updateTimeoutId] = useState();
+  const [movieList, updateMovieList] = useState();
+  const [selectedMovie, onMovieSelect] = useState();
+  const fetchData = async (searchString) => {
+    const response = await axios.get(`http://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`);
+    console.log(response, "hello")
+    updateMovieList(response.data.Search)
+  }
+
+ const onTextChange = (event) => {
+    clearTimeout(timeoutId);
+    updateSearchQuery(event.target.value);
+    const timeout = setTimeout(() => fetchData(event.target.value), 500);
+    updateTimeoutId(timeout)
+
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container">
+      <div className='header-bg'>
+        <div className='header-flex'>
+          <div className='d-flex'><div><img src="/images/reel.png" alt='Reel-image' width="40px" /></div>
+            <div className='header-heading'> React Movie App</div></div>
+          <div className='search-box'>
+            <div className='search-icon'><img src="/images/search-icon.png" alt='Reel-image' width="32px" /></div>
+            <div> <input type="text" name="search" value={searchQuery} placeholder="Search movie name .." onChange={onTextChange} /></div>
+          </div>
+        </div>
+      </div>
+
+      {selectedMovie &&
+        (<MovieInfoComponent selectedMovie={selectedMovie}
+          onMovieSelect={onMovieSelect} />)
+      }
+      <div className="movie-list-container">
+        {movieList?.length ? movieList.map((movie, index) => (
+          <MovieComponent key={index} movie={movie} onMovieSelect={onMovieSelect} />
+        ))
+          : <img src="/images/reel.png" width="150px" height="150px" style={{ margin: "50px auto", opacity: "20%" }} />}
+
+      </div>
+      <div>
+      </div>
+      </div>
   );
 }
 
