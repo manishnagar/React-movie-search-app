@@ -8,7 +8,7 @@ const MovieInfoComponent = (props) => {
   const [movieInfo, SetMovieInfo] = useState();
 
   useEffect(() => {
-    axios.get(`http://www.omdbapi.com/?i=${selectedMovie}&apikey=${API_KEY}`)
+    axios.get(`https://www.omdbapi.com/?i=${selectedMovie}&apikey=${API_KEY}`)
       .then((response) => SetMovieInfo(response.data));
   }, [selectedMovie])
 

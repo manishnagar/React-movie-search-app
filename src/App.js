@@ -13,7 +13,7 @@ function App() {
   const [movieList, updateMovieList] = useState();
   const [selectedMovie, onMovieSelect] = useState();
   const fetchData = async (searchString) => {
-    const response = await axios.get(`http://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`);
+    const response = await axios.get(`https://www.omdbapi.com/?s=${searchString}&apikey=${API_KEY}`);
     console.log(response, "hello")
     updateMovieList(response.data.Search)
   }
