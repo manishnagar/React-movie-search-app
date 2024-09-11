@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/React-movie-search-app/static/css/main.fbd64979.css",
-    "main.js": "/React-movie-search-app/static/js/main.32b9cf8a.js",
-    "static/media/poppins-latin-400-normal.woff": "/React-movie-search-app/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
-    "static/media/poppins-latin-400-normal.woff2": "/React-movie-search-app/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
-    "static/media/poppins-latin-ext-400-normal.woff": "/React-movie-search-app/static/media/poppins-latin-ext-400-normal.cf7e1ed83eb19f7b1ea6.woff",
-    "static/media/poppins-latin-ext-400-normal.woff2": "/React-movie-search-app/static/media/poppins-latin-ext-400-normal.6f94f40f848d79872444.woff2",
-    "index.html": "/React-movie-search-app/index.html",
-    "main.fbd64979.css.map": "/React-movie-search-app/static/css/main.fbd64979.css.map",
-    "main.32b9cf8a.js.map": "/React-movie-search-app/static/js/main.32b9cf8a.js.map"
+    "main.css": "/react-movie-search-app/static/css/main.86440943.css",
+    "main.js": "/react-movie-search-app/static/js/main.080557e0.js",
+    "static/media/poppins-latin-400-normal.woff": "/react-movie-search-app/static/media/poppins-latin-400-normal.1458587c0aa7cd06b82b.woff",
+    "static/media/poppins-latin-400-normal.woff2": "/react-movie-search-app/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff": "/react-movie-search-app/static/media/poppins-latin-ext-400-normal.cf7e1ed83eb19f7b1ea6.woff",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/react-movie-search-app/static/media/poppins-latin-ext-400-normal.6f94f40f848d79872444.woff2",
+    "index.html": "/react-movie-search-app/index.html",
+    "main.86440943.css.map": "/react-movie-search-app/static/css/main.86440943.css.map",
+    "main.080557e0.js.map": "/react-movie-search-app/static/js/main.080557e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbd64979.css",
-    "static/js/main.32b9cf8a.js"
+    "static/css/main.86440943.css",
+    "static/js/main.080557e0.js"
   ]
 }
