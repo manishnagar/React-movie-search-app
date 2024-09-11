@@ -16,7 +16,11 @@ const MovieInfoComponent = (props) => {
     <div className='movie-info'>
       {movieInfo ? <>
         <div>
-          <img src={movieInfo?.Poster} alt='movie-poster' />
+        {movieInfo?.Poster !== "N/A" ? (
+         <img src={movieInfo?.Poster} alt='movie-poster' />
+          ) : (
+            <div className="no-poster-text">Poster image is<br/> not available</div>
+          )}
         </div>
         <div className='movie-desc'>
           <p><span className='bold'>{movieInfo?.Type}</span> : <span>{movieInfo?.Title}</span> </p>

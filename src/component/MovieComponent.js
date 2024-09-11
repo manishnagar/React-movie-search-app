@@ -43,7 +43,13 @@ const MovieComponent = (props) => {
     <div>
       <MovieContainer onClick={() => props.onMovieSelect(imdbID)}>
         <div className='poster'>
-          <img src={Poster} alt="poster" /></div>
+        {Poster !== "N/A" ? (
+            <img src={Poster} alt="poster" />
+          ) : (
+            <div className="no-poster-text">Poster image is not available</div>
+          )}
+          
+          </div>
         <MovieName>{Title}</MovieName>
         <InfoColumn>
           <MovieInfo>Year : {Year}</MovieInfo>
