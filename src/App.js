@@ -1,12 +1,10 @@
 
-import axios, { Axios } from "axios";
+import axios from "axios";
 import './App.scss';
 import "@fontsource/poppins";
 import MovieInfoComponent from "./component/MovieInfoComponent";
 import MovieComponent from "./component/MovieComponent";
 import { useState } from "react";
-import styled from "styled-components";
-
 export const API_KEY = 'f30e88d3';
 
 function App() {
@@ -31,10 +29,12 @@ function App() {
     <div className="container">
       <div className='header-bg'>
         <div className='header-flex'>
-          <div className='d-flex'><div><img src="/images/reel.png" alt='Reel-image' width="40px" /></div>
+          <div className='d-flex'><div>
+          <img src={`${process.env.PUBLIC_URL}/images/reel.png`} alt="Reel logo" width="40px" />
+            </div>
             <div className='header-heading'> React Movie App</div></div>
           <div className='search-box'>
-            <div className='search-icon'><img src="/images/search-icon.png" alt='Reel-image' width="32px" /></div>
+            <div className='search-icon'><img src={`${process.env.PUBLIC_URL}/images/search-icon.png`} alt='search image' width="32px" /></div>
             <div> <input type="text" name="search" value={searchQuery} placeholder="Search movie name .." onChange={onTextChange} /></div>
           </div>
         </div>
@@ -48,7 +48,7 @@ function App() {
         {movieList?.length ? movieList.map((movie, index) => (
           <MovieComponent key={index} movie={movie} onMovieSelect={onMovieSelect} />
         ))
-          : <img src="/images/reel.png" width="150px" height="150px" style={{ margin: "50px auto", opacity: "20%" }} />}
+          : <img src={`${process.env.PUBLIC_URL}/images/reel.png`} width="150px" height="150px" style={{ margin: "50px auto", opacity: "20%" }} alt="Reelimage" />}
 
       </div>
       <div>
