@@ -19,3 +19,16 @@
 color: red;
 padding: 20px 0px;}
    }
+
+   @media only screen and (min-width: 360px) and (max-width: 768px) {
+    .movie-list-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      padding: 10px 0px;
+  
+  }   
+  
+   }

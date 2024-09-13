@@ -5,6 +5,8 @@ import "@fontsource/poppins";
 import MovieInfoComponent from "./component/MovieInfoComponent";
 import MovieComponent from "./component/MovieComponent";
 import { useState } from "react";
+import ScrollToTop from "react-scroll-to-top";
+
 export const API_KEY = 'f30e88d3';
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
   };
   return (
     <div className="container">
+              <ScrollToTop smooth color="#6f00ff" />
       <div className='header-bg'>
         <div className='header-flex'>
           <div className='d-flex'><div>
